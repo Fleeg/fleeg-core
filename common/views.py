@@ -7,26 +7,26 @@ from django.shortcuts import render
 
 class ErrorView:
     @staticmethod
-    def bad_request(request):
-        logging.error('Bad Request. Request: %s', ErrorView.stringify(request))
+    def bad_request(request, exception=None):
+        logging.error('Bad Request. Request: %s \n Exception: %s', ErrorView.stringify(request), exception)
         return render(request, 'error/error.html', {'code': 400, 'message': 'Bad Request'},
                       status=400)
 
     @staticmethod
-    def permission_denied(request):
-        logging.error('Permission Denied. Request: %s', ErrorView.stringify(request))
+    def permission_denied(request, exception=None):
+        logging.error('Permission Denied. Request: %s \n Exception: %s', ErrorView.stringify(request), exception)
         return render(request, 'error/error.html', {'code': 403, 'message': 'Permission Denied'},
                       status=403)
 
     @staticmethod
-    def page_not_found(request):
-        logging.error('Not found. Request: %s', ErrorView.stringify(request))
+    def page_not_found(request, exception=None):
+        logging.error('Not found. Request: %s \n Exception: %s', ErrorView.stringify(request), exception)
         return render(request, 'error/error.html', {'code': 404, 'message': 'Not Found'},
                       status=404)
 
     @staticmethod
-    def server_error(request):
-        logging.error('Internal Error. Request: %s', ErrorView.stringify(request))
+    def server_error(request, exception=None):
+        logging.error('Internal Error. Request: %s \n Exception: %s', ErrorView.stringify(request), exception)
         return render(request, 'error/error.html', {'code': 500, 'message': 'Internal Error'},
                       status=500)
 

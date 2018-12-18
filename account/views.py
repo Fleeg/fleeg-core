@@ -60,7 +60,7 @@ class AuthView:
 
     @staticmethod
     def home_redirect(request):
-        if request.user.is_authenticated():
+        if request.user.is_authenticated:
             return redirect(reverse('home'))
         else:
             return render(request, 'index.html')

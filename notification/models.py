@@ -11,9 +11,9 @@ class NotificationType(Enum):
 
 
 class Notification(models.Model):
-    owner = models.ForeignKey(to='account.Account', related_name='notifications')
-    sender = models.ForeignKey(to='account.Account', related_name='sent_notifications')
-    post = models.ForeignKey(to='link.Post', null=True)
+    owner = models.ForeignKey(to='account.Account', on_delete=models.CASCADE, related_name='notifications')
+    sender = models.ForeignKey(to='account.Account', on_delete=models.CASCADE, related_name='sent_notifications')
+    post = models.ForeignKey(to='link.Post', on_delete=models.CASCADE, null=True)
     type = models.CharField(max_length=50)
     viewed = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
