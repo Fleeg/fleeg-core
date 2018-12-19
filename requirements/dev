@@ -1,4 +1,4 @@
--r requirements
+-r stable
 
 # style checker
 flake8==3.6.0

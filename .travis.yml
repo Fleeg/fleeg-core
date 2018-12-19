@@ -5,13 +5,13 @@ python:
 
 install:
   - pip install codecov
-  - pip install -r devRequirements
+  - pip install -r requirements/dev
 
 before_script:
   - flake8 .
 
 script:
-  - coverage run manage.py test
+  - coverage run src/manage.py test
   - coverage report
 
 after_success:
