@@ -6,9 +6,9 @@ from account.models import Relationship
 
 
 class Post(models.Model):
-    owner = models.ForeignKey(to='account.Account', related_name='own_posts')
-    publisher = models.ForeignKey(to='account.Account', related_name='posts')
-    origin = models.ForeignKey(to='link.Post', related_name='adds', null=True)
+    owner = models.ForeignKey(to='account.Account', on_delete=models.CASCADE, related_name='own_posts')
+    publisher = models.ForeignKey(to='account.Account', on_delete=models.CASCADE, related_name='posts')
+    origin = models.ForeignKey(to='link.Post', on_delete=models.CASCADE, related_name='adds', null=True)
     url = models.URLField()
     type = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
@@ -69,8 +69,8 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    owner = models.ForeignKey(to='account.Account')
-    post = models.ForeignKey(to='link.Post', related_name='comments')
+    owner = models.ForeignKey(to='account.Account', on_delete=models.CASCADE)
+    post = models.ForeignKey(to='link.Post', on_delete=models.CASCADE, related_name='comments')
     text = models.CharField(max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -80,8 +80,8 @@ class Comment(models.Model):
 
 
 class Reaction(models.Model):
-    owner = models.ForeignKey(to='account.Account')
-    post = models.ForeignKey(to='link.Post', related_name='reactions')
+    owner = models.ForeignKey(to='account.Account', on_delete=models.CASCADE,)
+    post = models.ForeignKey(to='link.Post', on_delete=models.CASCADE, related_name='reactions')
     type = models.CharField(max_length=50, default='LIKE')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

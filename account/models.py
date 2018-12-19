@@ -3,7 +3,7 @@ from django.core.files.storage import FileSystemStorage
 
 
 class Account(models.Model):
-    user = models.ForeignKey(to='auth.User', related_name='accounts')
+    user = models.ForeignKey(to='auth.User', on_delete=models.CASCADE, related_name='accounts')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -32,8 +32,8 @@ class Account(models.Model):
 
 
 class Relationship(models.Model):
-    owner = models.ForeignKey(to='account.Account', related_name='following')
-    follow = models.ForeignKey(to='account.Account', related_name='followers')
+    owner = models.ForeignKey(to='account.Account', on_delete=models.CASCADE, related_name='following')
+    follow = models.ForeignKey(to='account.Account', on_delete=models.CASCADE, related_name='followers')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

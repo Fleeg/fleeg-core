@@ -1,5 +1,5 @@
 from django.test import TestCase
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 from account.factories import AccountFactory, RelationshipFactory, DEFAULT_PASSWORD
 from link.factories import PostFactory

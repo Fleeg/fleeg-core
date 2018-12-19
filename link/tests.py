@@ -3,7 +3,7 @@ import requests
 from unittest.mock import patch
 
 from django.test import TestCase
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 from account.factories import AccountFactory, DEFAULT_PASSWORD
 from link.factories import PostFactory, ReactionFactory

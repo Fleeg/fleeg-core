@@ -19,7 +19,7 @@ and will be available for all user as soon we think it is stable enough to u
 ser get a good experience. You may help us to delivery it faster, see below links to know how:
 
 * [About](https://github.com/Fleeg/fleeg-platform/wiki/About)
-* [Contributing](https://github.com/Fleeg/fleeg-platform/blob/master/CONTRIBUTING.md)
+* [Contributing](https://github.com/Fleeg/fleeg-core/blob/master/CONTRIBUTING.md)
 * [Developer Guidelines](https://github.com/Fleeg/fleeg-platform/wiki/Developer-Guidelines)
 * [Features](https://github.com/Fleeg/fleeg-platform/wiki/Features)
 
@@ -29,10 +29,10 @@ you have some questions, please join us at [Gitter](https://gitter.im/fleeg/Lobb
 
 ## Code of Conduct
 Help us keep the Fleeg Community open and inclusive. Please read and follow 
-our [Code of Conduct](https://github.com/Fleeg/fleeg-platform/blob/master/CODE_OF_CONDUCT.md).
+our [Code of Conduct](https://github.com/Fleeg/fleeg-core/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 Fleeg platform is licensed under AGPL v3.0. You must be careful to not include any code that 
 can not be licensed under this license.
-Please read carefully [our license](https://github.com/Fleeg/fleeg-platform/blob/master/LICENSE) 
+Please read carefully [our license](https://github.com/Fleeg/fleeg-core/blob/master/LICENSE) 
 and ask us if you have any questions.
