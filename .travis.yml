@@ -5,7 +5,7 @@ python:
 
 install:
   - pip install codecov
-  - pip install -r requirements/dev
+  - pip install -r requirements/dev.txt
 
 before_script:
   - flake8 .
