@@ -3,6 +3,7 @@ import logging
 from pprint import pformat
 
 from django.shortcuts import render
+from fleeg.settings import LOGGER_FILE
 
 
 class ErrorView:
@@ -35,4 +36,4 @@ class ErrorView:
         return '<' + type(obj).__name__ + '> ' + pformat(vars(obj), indent=4, width=1)
 
 
-logging.basicConfig(filename='app.log', level=logging.ERROR)
+logging.basicConfig(filename=LOGGER_FILE, level=logging.ERROR)
