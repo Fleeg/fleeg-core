@@ -15,6 +15,7 @@ SECRET_KEY = os.getenv('APP_SECRET_KEY',
 # SECURITY WARNING: don't run with debug or testing turned on in production!
 TESTING = True if 'test' in sys.argv else False
 DEBUG = True if 'runserver' in sys.argv or TESTING else False
+LOGGER_FILE = '../app.log'
 
 ALLOWED_HOSTS = ['*']
 
